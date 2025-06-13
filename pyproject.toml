@@ -89,6 +89,7 @@ exclude = [
     ".git",
     ".venv",
     ".cursor",
+    ".ruff_cache",
 ]
 
 # Same as Black.
