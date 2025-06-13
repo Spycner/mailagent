@@ -1,0 +1,37 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: "When Python environment management appears in docs, scripts, CI or code edits, use uv exclusively for env and packages. Avoid pip/venv references."
+globs:
+
+alwaysApply: false
+---
+# Python Environment Management with uv
+
+## Critical Rules
+- Always rely on `uv` for package installation and environment management.
+- Create environments with `uv init <options> <path>` when demonstrating setup.
+- Install or update deps with `uv add ...`, lock with `uv lock`, sync with `uv sync`.
+- Never reference `pip install`, `python -m venv`, or `virtualenv` in docs, scripts, or CI.
+- In automation (Makefile, GitHub Actions, etc.) replace any `pip`/`venv` commands with their `uv` equivalents.
+- Install `uv` via the official install script or package manager—not with `pip`.
+
+## Examples
+<example>
+# Good – uses uv
+```bash
+uv sync
+```
+</example>
+
+<example type="invalid">
+# Bad – uses pip directly
+```bash
+pip install -r requirements/dev.txt
+```
+
+
+</example>
