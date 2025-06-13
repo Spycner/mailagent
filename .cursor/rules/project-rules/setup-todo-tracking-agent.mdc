@@ -1,0 +1,115 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Setup Todo File Management & Progress Tracking
+
+## Critical Rules
+
+- **File Naming Convention**: Use format `setup-todos-YYYY-MM-DD.md` in `docs/todos/` directory
+- **Progress Tracking**: Use checkbox format `- [ ]` for incomplete, `- [x]` for complete tasks
+- **Issue Documentation**: Add "Issues Encountered" section with timestamp, problem, and solution
+- **Time Estimates**: Include realistic time estimates for each phase
+- **Status Updates**: Add progress notes directly inline with tasks using `✅ DONE`, `⚠️ ISSUE`, `🔄 IN PROGRESS`
+- **Solution Recording**: Document exact commands, fixes, and workarounds that resolved issues
+- **Next Session Prep**: Always end with "Next Session" section outlining immediate next steps
+
+## File Structure Template
+
+```markdown
+# Setup Todos - [Date]
+
+**Project**: [Project Name]
+**Date**: [Full Date]
+**Estimated Time**: [X-Y hours]
+**Session Status**: [PLANNING|IN PROGRESS|COMPLETED|BLOCKED]
+
+## Pre-Setup Checklist ✅
+- [ ] [Prerequisite items]
+
+## Phase N: [Phase Name] ([Time Estimate])
+### N.1 [Subtask Name]
+- [ ] **[Task Description]**
+  - Commands: `code block`
+  - Expected outcome: [description]
+  - ✅ DONE: [timestamp] - [brief note]
+  - ⚠️ ISSUE: [timestamp] - [problem description]
+  - 🔧 SOLUTION: [timestamp] - [how it was fixed]
+
+## Issues Encountered 🔧
+### [Timestamp] - [Issue Title]
+**Problem**: [Detailed description]
+**Error Message**:
+```
+[exact error if applicable]
+```
+**Solution**: [Step-by-step fix]
+**Prevention**: [How to avoid in future]
+
+## Progress Log 📊
+- **Started**: [timestamp]
+- **Phase 1**: ✅ Completed [timestamp]
+- **Phase 2**: 🔄 In Progress
+- **Blocked on**: [description if applicable]
+
+## Next Session 🚀
+**Priority Tasks**:
+1. [Most important next task]
+2. [Second priority]
+
+**Context for Tomorrow**:
+- [Key information to remember]
+- [Current state/where you left off]
+
+## Success Criteria ✨
+- [ ] [Measurable completion criteria]
+```
+
+## Examples
+
+<example>
+  # Setup Todos - June 14, 2025
+
+  **Project**: Mailagent Google Cloud Setup
+  **Session Status**: IN PROGRESS
+
+  ## Phase 1: Google Cloud Console Setup (30 minutes)
+  ### 1.1 Account Setup
+  - [x] **Login to Google Cloud Console**
+    - ✅ DONE: 10:30 AM - Successfully logged in
+  - [ ] **Enable billing**
+    - 🔄 IN PROGRESS: 10:35 AM - Adding payment method
+    - ⚠️ ISSUE: 10:45 AM - Credit card validation failed
+    - 🔧 SOLUTION: 10:50 AM - Used different card, worked immediately
+    - ✅ DONE: 10:52 AM - Billing enabled, account ID: 123456-789ABC-DEF012
+
+  ## Issues Encountered 🔧
+  ### 10:45 AM - Credit Card Validation Failed
+  **Problem**: Primary credit card rejected during billing setup
+  **Error Message**: "Payment method could not be verified"
+  **Solution**: Switched to backup credit card, cleared browser cache
+  **Prevention**: Keep multiple payment methods available for GCP setup
+
+  ## Next Session 🚀
+  **Priority Tasks**:
+  1. Complete Terraform infrastructure deployment
+  2. Set up OAuth consent screen
+
+  **Context for Tomorrow**:
+  - Billing account ID: 123456-789ABC-DEF012
+  - Using us-central1 region
+  - Need to create terraform.tfvars with billing account
+</example>
+
+<example type="invalid">
+  # Setup Notes
+
+  - Did some Google Cloud stuff
+  - Had some issues but fixed them
+  - Need to do more tomorrow
+
+  ## Problems
+  - Something didn't work
+  - Fixed it somehow
+</example>
