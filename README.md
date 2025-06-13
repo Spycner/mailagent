@@ -14,20 +14,20 @@ Even simple mailing lists and newsletters can quickly overwhelm an inbox.  Valua
 Source-Mail ▶︎ Knowledge-Base ▶︎ Weekly Digest
 ```
 
-1. **Single mailbox (Gmail)**  
-   • Authenticate via OAuth2 ("Gmail API" preferred over raw IMAP)  
-   • Pull new messages, starting from the most recent 30 days  
-2. **Parse & store**  
-   • Extract plain-text / HTML body, subject, date, sender  
-   • Persist messages in a simple database (SQLite for speed of setup)  
-3. **Index**  
-   • Generate semantic embeddings (OpenAI or local model) and store alongside metadata  
-   • Build rudimentary search endpoint (keyword + vector)  
-4. **Digest generation**  
-   • On a weekly schedule compile unread / new messages  
-   • Summarise (LLM) and e-mail a markdown / HTML digest to each subscriber  
-5. **Subscription management**  
-   • Minimal CLI or REST endpoint to add / remove e-mail addresses  
+1. **Single mailbox (Gmail)**
+   • Authenticate via OAuth2 ("Gmail API" preferred over raw IMAP)
+   • Pull new messages, starting from the most recent 30 days
+2. **Parse & store**
+   • Extract plain-text / HTML body, subject, date, sender
+   • Persist messages in a simple database (SQLite for speed of setup)
+3. **Index**
+   • Generate semantic embeddings (OpenAI or local model) and store alongside metadata
+   • Build rudimentary search endpoint (keyword + vector)
+4. **Digest generation**
+   • On a weekly schedule compile unread / new messages
+   • Summarise (LLM) and e-mail a markdown / HTML digest to each subscriber
+5. **Subscription management**
+   • Minimal CLI or REST endpoint to add / remove e-mail addresses
 
 ## 3. Tech Stack
 
@@ -64,7 +64,7 @@ flowchart TD
 ## 5. Roadmap
 
 1. 🔑 Set up Google Cloud project & OAuth credentials
-2. 📨 Implement mailbox fetcher (Gmail API)  
+2. 📨 Implement mailbox fetcher (Gmail API)
    • Incremental sync storing `historyId` to avoid duplicates
 3. 🗄️ Design SQLite schema (messages, embeddings, subscribers, digests)
 4. ✍️ Integrate OpenAI embeddings & summarisation
@@ -75,11 +75,11 @@ flowchart TD
 
 ## 6. Stretch Goals
 
-• Outlook & generic IMAP integrations  
-• Web UI with search, tagging, and smart filters  
-• Multi-tenant DB / user auth  
-• Advanced ranking (RRF, semantic clusters)  
-• Daily / custom frequency digests  
+• Outlook & generic IMAP integrations
+• Web UI with search, tagging, and smart filters
+• Multi-tenant DB / user auth
+• Advanced ranking (RRF, semantic clusters)
+• Daily / custom frequency digests
 
 ---
 
